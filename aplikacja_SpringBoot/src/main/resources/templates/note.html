@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Notes</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+  <h1>Add your Notes</h1>
+    <form action="#" th:action="@{/note}" method="post" th:object=${note}>
+      <p>Importance: <select th:field="*{importance}">
+      		<option
+      		th:each="ImportanceEnum : ${T(lab7.aplikacja.domain.ImportanceEnum).values()}"
+            th:value="${ImportanceEnum}"
+            th:text="${ImportanceEnum}">
+      		</option>
+      	</select></p>
+        <p>Text for Note: <input type="text" th:field="*{text}"/></p>
+        <p><input type="submit" value="Add" /></p>
+        
+	<h1>Your Notes</h1>
+	<table>
+		<tr>
+			<th>IMPORTANCE</th>
+			<th>TIMESTAMP</th>
+			<th>NOTE</th>
+		</tr>
+		<tr th:each="listnote : ${notes}">
+			<td th:text=${listnote.importance}/>
+			<td th:text="${listnote.timestamp}"/>
+			<td th:text="${listnote.text}"/>
+		</tr>
+	</table>        
+    </form>
+</body>
+</html>
+        	

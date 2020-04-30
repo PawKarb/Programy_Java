@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="create_run_jar" name="Create Runnable Jar for Project OXGame with libraries in sub-folder">
+    <!--this file was created by Eclipse Runnable JAR Export Wizard-->
+    <!--ANT 1.7 is required                                        -->
+    <!--define folder properties-->
+    <property name="dir.buildfile" value="."/>
+    <property name="dir.workspace" value="${dir.buildfile}/.."/>
+    <property name="dir.jarfile" value="${dir.buildfile}/dist/OXGame"/>
+    <target name="create_run_jar">
+        <jar destfile="${dir.jarfile}/OXGame.jar">
+            <manifest>
+                <attribute name="Main-Class" value="lab.oxgame.Main"/>
+                <attribute name="Class-Path" value=". OXGame_lib/org.eclipse.fx.ide.css.jfx8_3.3.0.201809010700.jar OXGame_lib/HikariCP-3.4.1.jar OXGame_lib/hsqldb-2.5.0.jar OXGame_lib/logback-classic-1.2.3.jar OXGame_lib/logback-core-1.2.3.jar OXGame_lib/slf4j-api-1.7.29.jar"/>
+            </manifest>
+            <fileset dir="${dir.buildfile}/bin"/>
+        </jar>
+        <delete dir="${dir.jarfile}/OXGame_lib"/>
+        <mkdir dir="${dir.jarfile}/OXGame_lib"/>
+        <copy file="C:/eclipse-2018-09/eclipse/plugins/org.eclipse.fx.ide.css.jfx8_3.3.0.201809010700.jar" todir="${dir.jarfile}/OXGame_lib"/>
+        <copy file="${dir.buildfile}/lib/HikariCP-3.4.1.jar" todir="${dir.jarfile}/OXGame_lib"/>
+        <copy file="${dir.buildfile}/lib/hsqldb-2.5.0.jar" todir="${dir.jarfile}/OXGame_lib"/>
+        <copy file="${dir.buildfile}/lib/logback-classic-1.2.3.jar" todir="${dir.jarfile}/OXGame_lib"/>
+        <copy file="${dir.buildfile}/lib/logback-core-1.2.3.jar" todir="${dir.jarfile}/OXGame_lib"/>
+        <copy file="${dir.buildfile}/lib/slf4j-api-1.7.29.jar" todir="${dir.jarfile}/OXGame_lib"/>
+    </target>
+</project>
