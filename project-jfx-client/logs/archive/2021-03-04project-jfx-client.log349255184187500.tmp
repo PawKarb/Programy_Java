@@ -1,0 +1,109 @@
+2021-03-04 11:32:21.996 [main] INFO  com.project.model.Projekt.main(19) - Id utworzonego projektu: 1
+2021-03-04 11:32:21.999 [main] ERROR com.project.model.Projekt.main(28) - B³¹d podczas pobierania projektu (Id: 1)!
+java.lang.RuntimeException: java.sql.SQLSyntaxErrorException: data type of expression is not boolean in statement [SELECT * FROM projekt WHERE ? ORDER BY data_czas_utworzenia DESC]
+	at com.project.dao.ProjektDAOImpl.getProjekt(ProjektDAOImpl.java:26)
+	at com.project.app.ProjectClientApplication.main(ProjectClientApplication.java:24)
+Caused by: java.sql.SQLSyntaxErrorException: data type of expression is not boolean in statement [SELECT * FROM projekt WHERE ? ORDER BY data_czas_utworzenia DESC]
+	at org.hsqldb.jdbc.JDBCUtil.sqlException(Unknown Source)
+	at org.hsqldb.jdbc.JDBCUtil.sqlException(Unknown Source)
+	at org.hsqldb.jdbc.JDBCPreparedStatement.<init>(Unknown Source)
+	at org.hsqldb.jdbc.JDBCConnection.prepareStatement(Unknown Source)
+	at com.zaxxer.hikari.pool.ProxyConnection.prepareStatement(ProxyConnection.java:316)
+	at com.zaxxer.hikari.pool.HikariProxyConnection.prepareStatement(HikariProxyConnection.java)
+	at com.project.dao.ProjektDAOImpl.getProjekt(ProjektDAOImpl.java:23)
+	... 1 common frames omitted
+Caused by: org.hsqldb.HsqlException: data type of expression is not boolean
+	at org.hsqldb.error.Error.error(Unknown Source)
+	at org.hsqldb.error.Error.error(Unknown Source)
+	at org.hsqldb.QuerySpecification.resolveExpressionTypes(Unknown Source)
+	at org.hsqldb.QuerySpecification.resolveTypesPartOne(Unknown Source)
+	at org.hsqldb.QueryExpression.resolve(Unknown Source)
+	at org.hsqldb.ParserDQL.compileCursorSpecification(Unknown Source)
+	at org.hsqldb.ParserCommand.compilePart(Unknown Source)
+	at org.hsqldb.ParserCommand.compileStatement(Unknown Source)
+	at org.hsqldb.Session.compileStatement(Unknown Source)
+	at org.hsqldb.StatementManager.compile(Unknown Source)
+	at org.hsqldb.Session.execute(Unknown Source)
+	... 6 common frames omitted
+2021-03-04 11:41:38.120 [main] INFO  com.project.model.Projekt.main(19) - Id utworzonego projektu: 1
+2021-03-04 11:41:38.125 [main] ERROR com.project.model.Projekt.main(28) - B³¹d podczas pobierania projektu (Id: 1)!
+java.lang.RuntimeException: java.sql.SQLSyntaxErrorException: data type of expression is not boolean in statement [SELECT * FROM projekt WHERE ? ORDER BY data_czas_utworzenia DESC]
+	at com.project.dao.ProjektDAOImpl.getProjekt(ProjektDAOImpl.java:26)
+	at com.project.app.ProjectClientApplication.main(ProjectClientApplication.java:24)
+Caused by: java.sql.SQLSyntaxErrorException: data type of expression is not boolean in statement [SELECT * FROM projekt WHERE ? ORDER BY data_czas_utworzenia DESC]
+	at org.hsqldb.jdbc.JDBCUtil.sqlException(Unknown Source)
+	at org.hsqldb.jdbc.JDBCUtil.sqlException(Unknown Source)
+	at org.hsqldb.jdbc.JDBCPreparedStatement.<init>(Unknown Source)
+	at org.hsqldb.jdbc.JDBCConnection.prepareStatement(Unknown Source)
+	at com.zaxxer.hikari.pool.ProxyConnection.prepareStatement(ProxyConnection.java:316)
+	at com.zaxxer.hikari.pool.HikariProxyConnection.prepareStatement(HikariProxyConnection.java)
+	at com.project.dao.ProjektDAOImpl.getProjekt(ProjektDAOImpl.java:23)
+	... 1 common frames omitted
+Caused by: org.hsqldb.HsqlException: data type of expression is not boolean
+	at org.hsqldb.error.Error.error(Unknown Source)
+	at org.hsqldb.error.Error.error(Unknown Source)
+	at org.hsqldb.QuerySpecification.resolveExpressionTypes(Unknown Source)
+	at org.hsqldb.QuerySpecification.resolveTypesPartOne(Unknown Source)
+	at org.hsqldb.QueryExpression.resolve(Unknown Source)
+	at org.hsqldb.ParserDQL.compileCursorSpecification(Unknown Source)
+	at org.hsqldb.ParserCommand.compilePart(Unknown Source)
+	at org.hsqldb.ParserCommand.compileStatement(Unknown Source)
+	at org.hsqldb.Session.compileStatement(Unknown Source)
+	at org.hsqldb.StatementManager.compile(Unknown Source)
+	at org.hsqldb.Session.execute(Unknown Source)
+	... 6 common frames omitted
+2021-03-04 11:46:31.160 [main] INFO  com.project.model.Projekt.main(19) - Id utworzonego projektu: 1
+2021-03-04 11:46:31.163 [main] ERROR com.project.model.Projekt.main(28) - B³¹d podczas pobierania projektu (Id: 1)!
+java.lang.RuntimeException: java.sql.SQLSyntaxErrorException: data type of expression is not boolean in statement [SELECT * FROM projekt WHERE ? ORDER BY data_czas_utworzenia DESC]
+	at com.project.dao.ProjektDAOImpl.getProjekt(ProjektDAOImpl.java:33)
+	at com.project.app.ProjectClientApplication.main(ProjectClientApplication.java:24)
+Caused by: java.sql.SQLSyntaxErrorException: data type of expression is not boolean in statement [SELECT * FROM projekt WHERE ? ORDER BY data_czas_utworzenia DESC]
+	at org.hsqldb.jdbc.JDBCUtil.sqlException(Unknown Source)
+	at org.hsqldb.jdbc.JDBCUtil.sqlException(Unknown Source)
+	at org.hsqldb.jdbc.JDBCPreparedStatement.<init>(Unknown Source)
+	at org.hsqldb.jdbc.JDBCConnection.prepareStatement(Unknown Source)
+	at com.zaxxer.hikari.pool.ProxyConnection.prepareStatement(ProxyConnection.java:316)
+	at com.zaxxer.hikari.pool.HikariProxyConnection.prepareStatement(HikariProxyConnection.java)
+	at com.project.dao.ProjektDAOImpl.getProjekt(ProjektDAOImpl.java:23)
+	... 1 common frames omitted
+Caused by: org.hsqldb.HsqlException: data type of expression is not boolean
+	at org.hsqldb.error.Error.error(Unknown Source)
+	at org.hsqldb.error.Error.error(Unknown Source)
+	at org.hsqldb.QuerySpecification.resolveExpressionTypes(Unknown Source)
+	at org.hsqldb.QuerySpecification.resolveTypesPartOne(Unknown Source)
+	at org.hsqldb.QueryExpression.resolve(Unknown Source)
+	at org.hsqldb.ParserDQL.compileCursorSpecification(Unknown Source)
+	at org.hsqldb.ParserCommand.compilePart(Unknown Source)
+	at org.hsqldb.ParserCommand.compileStatement(Unknown Source)
+	at org.hsqldb.Session.compileStatement(Unknown Source)
+	at org.hsqldb.StatementManager.compile(Unknown Source)
+	at org.hsqldb.Session.execute(Unknown Source)
+	... 6 common frames omitted
+2021-03-04 11:47:09.172 [main] INFO  com.project.model.Projekt.main(19) - Id utworzonego projektu: 1
+2021-03-04 11:47:09.175 [main] ERROR com.project.model.Projekt.main(28) - B³¹d podczas pobierania projektu (Id: 1)!
+java.lang.RuntimeException: java.sql.SQLException: invalid cursor state: identifier cursor not positioned on row in UPDATE, DELETE, SET, or GET statement: ; ResultSet is positioned before first row
+	at com.project.dao.ProjektDAOImpl.getProjekt(ProjektDAOImpl.java:33)
+	at com.project.app.ProjectClientApplication.main(ProjectClientApplication.java:24)
+Caused by: java.sql.SQLException: invalid cursor state: identifier cursor not positioned on row in UPDATE, DELETE, SET, or GET statement: ; ResultSet is positioned before first row
+	at org.hsqldb.jdbc.JDBCUtil.sqlException(Unknown Source)
+	at org.hsqldb.jdbc.JDBCUtil.sqlException(Unknown Source)
+	at org.hsqldb.jdbc.JDBCUtil.sqlException(Unknown Source)
+	at org.hsqldb.jdbc.JDBCResultSet.getCurrent(Unknown Source)
+	at org.hsqldb.jdbc.JDBCResultSet.getColumnValue(Unknown Source)
+	at org.hsqldb.jdbc.JDBCResultSet.getColumnInType(Unknown Source)
+	at org.hsqldb.jdbc.JDBCResultSet.getInt(Unknown Source)
+	at org.hsqldb.jdbc.JDBCResultSet.getInt(Unknown Source)
+	at com.zaxxer.hikari.pool.HikariProxyResultSet.getInt(HikariProxyResultSet.java)
+	at com.project.dao.ProjektDAOImpl.getProjekt(ProjektDAOImpl.java:26)
+	... 1 common frames omitted
+Caused by: org.hsqldb.HsqlException: invalid cursor state: identifier cursor not positioned on row in UPDATE, DELETE, SET, or GET statement: ; ResultSet is positioned before first row
+	at org.hsqldb.error.Error.error(Unknown Source)
+	at org.hsqldb.error.Error.error(Unknown Source)
+	at org.hsqldb.error.Error.error(Unknown Source)
+	... 9 common frames omitted
+2021-03-04 11:48:36.586 [main] INFO  com.project.model.Projekt.main(19) - Id utworzonego projektu: 1
+2021-03-04 11:52:58.321 [main] INFO  com.project.model.Projekt.main(19) - Id utworzonego projektu: 2
+2021-03-04 11:53:30.899 [main] INFO  com.project.model.Projekt.main(19) - Id utworzonego projektu: 3
+2021-03-04 11:54:21.622 [main] INFO  com.project.model.Projekt.main(19) - Id utworzonego projektu: 4
+2021-03-04 11:55:31.904 [main] INFO  com.project.model.Projekt.main(19) - Id utworzonego projektu: 5
+2021-03-04 11:58:47.545 [main] INFO  com.project.model.Projekt.main(19) - Id utworzonego projektu: 6
