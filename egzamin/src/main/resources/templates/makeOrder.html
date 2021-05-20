@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Make Orders</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+  <h1>ZŁÓŻ ZAMÓWIENIE</h1>
+  <form action="#" th:action="@{/makeOrder}" method="post" th:object=${order}>
+  <p>Imie <input type="text" th:field="*{imie}" required/></p>
+        <p>Wybór Pizzy:
+         <select th:field="*{nazwaPizzy}" id="listanazw">
+      		<option value = 0>Wybierz Pizze z listy</option>
+      		<option th:each="pizzaName : ${nazwa}"
+            th:value="${pizzaName.nazwap}"
+            th:text="${pizzaName.nazwap} + ' (' + ${pizzaName.skladniki}+')'" required></option>
+      	</select>
+      	<p>Ilość: <input type="number" th:field=*{ilosc} min = 1/></p>
+      	<p>Cena za pizzę: <p id="cena" th:field=*{cena}/></p>
+      	<p><input type="submit" value="Add" /></p>
+  </form>       
+</body>
+</html>  

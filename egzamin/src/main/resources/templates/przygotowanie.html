@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Strona z Zamowieniami</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	  <form action="#" th:action="@{/przygotowanie}" method="post" th:object=${kucharz}>
+	<table>
+		<tr>
+			<th>Numer</th>
+			<th>Nazwa</th>
+			<th>Ilosc</th>
+			<th>Czy Gotowe?</th>
+		</tr>
+		<tr th:each="zamowienia : ${orders}">
+			<td th:text=${zamowienia.id}/>
+			<input type="hidden" th:value="${zamowienia.id}" th:field="*{numerZamowienia}"/>
+			<td th:text=${zamowienia.nazwaPizzy} th:field=*{nazwaPizzy}/>
+			<td th:text=${zamowienia.ilosc} th:field=*{ilosc}>
+			<td><input type="checkbox" th:field=*{czyGotowe}/></td>
+		</tr>
+	</table> 
+	<p><input type="submit" value="Zatwierdz Zmiany" /></p> 
+	</form>
+</body>
+</html>  

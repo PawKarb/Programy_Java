@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Twoje Zamowienie</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+  <h1>ZAMÓWIENIE</h1>
+  	<table>
+		<tr>
+			<th>Nazwa</th>
+			<th>Ilość</th>
+			<th>Cena</th>
+		</tr>
+		<tr th:each="zamowienia : ${orders}">
+			<td th:text=${zamowienia.nazwaPizzy}/>
+			<td th:text=${zamowienia.ilosc}/>
+			<td th:text=${zamowienia.cena}/>
+		</tr>
+	</table>    
+  <form action="#" th:action="@{/koniec}" method="post" th:object=${orders}>
+      	<p><input type="submit" value="Zakończ" /></p>
+  </form>
+    <form action="#" th:action="@{/zamowienie}" method="post" th:object=${orders}>
+      	<p><input type="submit" value="Wyczysc Koszyk" /></p>
+  </form>
+  <a href="/makeOrder">Powrót>>></a>  
+</body>
+</html>  
